@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cartinha Para Você, Meu Amor 💌</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;600&display=swap');
+
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom right, #ffe4e1, #ffc1cc);
+      font-family: 'Quicksand', sans-serif;
+      color: #5a1a01;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      background: #fffafa;
+      border-radius: 25px;
+      padding: 40px;
+      max-width: 600px;
+      box-shadow: 0 8px 20px rgba(255, 105, 180, 0.3);
+      position: relative;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: #e75480;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+    }
+
+    .heart {
+      position: absolute;
+      font-size: 2rem;
+      animation: float 4s infinite ease-in-out;
+      color: #ff69b4;
+    }
+
+    .heart:nth-child(odd) {
+      animation-duration: 6s;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-200px); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Para Minha Princesinha 💖</h1>
+    <p>
+      Oi, Meu Amorzinho...<br><br>
+      Às vezes, nem acredito que tenho a sorte de te chamar de minha. Você é a melhor parte dos meus dias, a calma no meu caos e a luz que guia meu coração.<br><br>
+      Desde que te conheci, há 3 anos, minha vida nunca mais foi a mesma. E agora, há 2 meses, estamos oficialmente juntos… e tudo ficou ainda mais especial.<br><br>
+      Você é linda por dentro e por fora. Seu sorriso me acalma, sua voz me abraça, e seu jeitinho faz meu coração derreter de amor.<br><br>
+      Eu quero viver mil momentos com você. Quero rir contigo, cuidar de você, enfrentar o mundo do seu lado, crescer ao seu lado, e construir um futuro juntinhos.<br><br>
+      Quero passar o resto da minha vida com você, minha princesa. Você é meu anjo, minha inspiração, meu amor eterno.<br><br>
+      Eu Te Amo mais do que palavras podem dizer, e só quero te fazer feliz todos os dias da sua vida. Obrigado por existir e por estar comigo. 💗
+    </p>
+  </div>
+
+  <!-- Corações flutuantes -->
+  <script>
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.textContent = '❤️';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.top = '100%';
+      heart.style.position = 'fixed';
+      heart.style.fontSize = (16 + Math.random() * 20) + 'px';
+      heart.style.animationDuration = (3 + Math.random() * 3) + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }
+
+    setInterval(createHeart, 600);
+  </script>
+</body>
+</html>
